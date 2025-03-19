@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { login, setAuthToken } from '../services/api';
 import { useNavigate } from 'react-router-dom';
-import './Login.css'; // Import the enhanced CSS file
+import './Login.css'; // Import CSS
 
 const Login = () => {
   const [email, setEmail] = useState('');

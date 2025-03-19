@@ -1,7 +1,7 @@
 // pages/Home.jsx
 import React, { useState, useEffect } from 'react';
 import { reportLostItem, reportFoundItem, getMatchingItems } from '../services/api';
-import './Home.css';  // Import the CSS file
+import './Home.css'; // Import CSS
 
 const Home = () => {
   const [matches, setMatches] = useState([]);
@@ -57,7 +57,7 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <h1>Lost & Found Portal</h1>
+      <h1>Lost &amp; Found Portal</h1>
 
       <div className="section">
         <h2>Report Lost Item</h2>
