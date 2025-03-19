@@ -1,6 +1,7 @@
 // pages/Admin.jsx
 import React, { useState, useEffect } from 'react';
 import { resolveItem, getMatchingItems } from '../services/api';
+import './Admin.css'; // Import the CSS file
 
 const Admin = () => {
   const [matches, setMatches] = useState([]);
@@ -31,29 +32,33 @@ const Admin = () => {
   };
 
   return (
-    <div>
+    <div className="admin-container">
       <h1>Admin Panel</h1>
-      <h2>Matched Items</h2>
-      {matches.length === 0 && <p>No matched items found.</p>}
-      {matches.map((match, index) => (
-        <div key={index}>
-          <h3>Lost Item: {match.lostItem.name}</h3>
-          <p>{match.lostItem.description}</p>
-          <button onClick={() => handleResolve(match.lostItem._id)}>
-            Resolve Lost Item
-          </button>
-          <ul>
-            {match.foundItems.map((foundItem) => (
-              <li key={foundItem._id}>
-                <strong>Found Item:</strong> {foundItem.name} - {foundItem.description}
-                <button onClick={() => handleResolve(foundItem._id)}>
-                  Resolve Found Item
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
+      <div className="admin-section">
+        <h2>Matched Items</h2>
+        {matches.length === 0 && <p>No matched items found.</p>}
+        {matches.map((match, index) => (
+          <div key={index} className="match-item">
+            <h3>Lost Item: {match.lostItem.name}</h3>
+            <p>{match.lostItem.description}</p>
+            <button onClick={() => handleResolve(match.lostItem._id)}>
+              Resolve Lost Item
+            </button>
+            <ul>
+              {match.foundItems.map((foundItem) => (
+                <li key={foundItem._id}>
+                  <span>
+                    <strong>Found Item:</strong> {foundItem.name} - {foundItem.description}
+                  </span>
+                  <button onClick={() => handleResolve(foundItem._id)}>
+                    Resolve Found Item
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

@@ -1,0 +1,94 @@
+/* Admin.css */
+
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f2f2f2;
+    line-height: 1.6;
+  }
+  
+  /* Main container for the admin panel */
+  .admin-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+  }
+  
+  /* Header styles */
+  .admin-container h1,
+  .admin-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Section container styling */
+  .admin-section {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styling for each matched item container */
+  .match-item {
+    background: #f9f9f9;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title styling for lost item */
+  .match-item h3 {
+    margin-bottom: 10px;
+    color: #5563DE;
+  }
+  
+  /* Paragraph styling */
+  .match-item p {
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  /* Button styling for resolve actions */
+  .match-item button {
+    margin: 5px 0;
+    padding: 8px 15px;
+    background-color: #5563DE;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .match-item button:hover {
+    background-color: #4453c1;
+  }
+  
+  /* List styling for found items */
+  .match-item ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+  }
+  
+  .match-item li {
+    padding: 10px;
+    background: #fff;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  

@@ -1,6 +1,7 @@
 // pages/Home.jsx
 import React, { useState, useEffect } from 'react';
 import { reportLostItem, reportFoundItem, getMatchingItems } from '../services/api';
+import './Home.css';  // Import the CSS file
 
 const Home = () => {
   const [matches, setMatches] = useState([]);
@@ -55,10 +56,10 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className="home-container">
       <h1>Lost & Found Portal</h1>
 
-      <div>
+      <div className="section">
         <h2>Report Lost Item</h2>
         <form onSubmit={handleReportLost}>
           <input type="text" name="name" placeholder="Item Name" required />
@@ -69,7 +70,7 @@ const Home = () => {
         </form>
       </div>
 
-      <div>
+      <div className="section">
         <h2>Report Found Item</h2>
         <form onSubmit={handleReportFound}>
           <input type="text" name="name" placeholder="Item Name" required />
@@ -80,11 +81,11 @@ const Home = () => {
         </form>
       </div>
 
-      <div>
+      <div className="section">
         <h2>Matching Items</h2>
         {matches.length === 0 && <p>No matching items found.</p>}
         {matches.map((match, index) => (
-          <div key={index}>
+          <div key={index} className="match-item">
             <h3>Lost Item: {match.lostItem.name}</h3>
             <p>{match.lostItem.description}</p>
             <ul>

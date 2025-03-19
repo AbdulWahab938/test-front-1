@@ -1,0 +1,107 @@
+/* Home.css */
+
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f2f2f2;
+    line-height: 1.6;
+  }
+  
+  /* Main container styling */
+  .home-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+  }
+  
+  /* Overall header style */
+  .home-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Section container for each area */
+  .section {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Headings for sections */
+  .section h2 {
+    margin-bottom: 15px;
+    color: #5563DE;
+  }
+  
+  /* Form styling */
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  form input[type="text"],
+  form input[type="date"] {
+    flex: 1 1 200px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+  }
+  
+  form input:focus {
+    border-color: #5563DE;
+    outline: none;
+  }
+  
+  form button {
+    padding: 10px 20px;
+    background-color: #5563DE;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #4453c1;
+  }
+  
+  /* Styling for the matching items list */
+  .match-item {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .match-item h3 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .match-item ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .match-item li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .match-item li:last-child {
+    border-bottom: none;
+  }
+  
